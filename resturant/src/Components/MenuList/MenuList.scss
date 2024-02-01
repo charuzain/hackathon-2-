@@ -1,13 +1,14 @@
 
 .item {
-  background-color: white;
-  border: 1px solid red;
+  background-color: #fff;
+  border: 1px solid #F54749 ;
   border-radius: 8px;
   width: 300px;
 
 
 &__image {
   width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
 &__info {
@@ -16,16 +17,40 @@
 
 &__name {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  color: #000;
 }
 
 &__price {
-  color: red;
+  color:#F54749 ;
+  padding-top: .5rem;
+  font-weight: bold;
+
 }
 
 &__description {
-  margin-top: 1rem;
   font-size: 1.2rem;
   color: #555;
+  margin-top: 0;
+}
+&__quantity-controls{
+  text-align: center;
+}
+&__quantity-button{
+  margin-right: .5rem;
+}
+&__quantity-button{
+  margin-left: .5rem;
+}
+&__cart{
+  text-align: center;
+  margin-top: 1rem;
+}
+&__add-to-cart-button{
+background-color: #F54749;
+ padding: 1rem;
+ color: #fff;
+ border: none;
+ border-radius: 5px;
 }
 }

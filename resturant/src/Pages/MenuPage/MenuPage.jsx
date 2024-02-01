@@ -73,18 +73,19 @@ function Menu() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <main>
-      <h1>Our Menu</h1>
-      <div className="search-sort-container">
-        <div className="search-container">
+    <main className='menu'>
+      <h1 className='menu__title'>Our Menu</h1>
+      <div className="menu__search-sort-container">
+        <div className='menu__wrap'>
+        <div className="menu__search-container">
           <input
             type="text"
-            placeholder="Search by name or ingredient..."
+            placeholder="Search by name or ingredient"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />
         </div>
-        <div className="sort-container">
+        <div className="menu__sort-container">
           <label>
             Sort by Price:
             <select value={sortBy} onChange={(e) => sortItems(e.target.value)}>
@@ -94,7 +95,7 @@ function Menu() {
             </select>
           </label>
         </div>
-        <div className="vegetarian-switch">
+        <div className="menu__vegetarian-switch">
           <label>
             Vegetarian Only
             <input
@@ -104,6 +105,7 @@ function Menu() {
             />
           </label>
         </div>
+        </div>
       </div>
       <Categories categories={allCategories} filterItems={filterItems} />
 
@@ -112,17 +114,17 @@ function Menu() {
       )}
 
       {!menu && <h1>Loading...</h1>}
-      <ul>
+      <ul className='menu__list'>
         {currentItems.map((item) => (
           <MenuList key={item.id} {...item} />
         ))}
       </ul>
       {filteredMenu.length > itemsPerPage && (
-        <div className="pagination">
+        <div className="menu__pagination">
           {Array.from(
             { length: Math.ceil(filteredMenu.length / itemsPerPage) },
             (_, i) => (
-              <button key={i + 1} onClick={() => paginate(i + 1)}>
+              <button className='menu__pagination-btn' key={i + 1} onClick={() => paginate(i + 1)}>
                 {i + 1}
               </button>
             )

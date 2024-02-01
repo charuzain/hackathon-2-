@@ -6,6 +6,10 @@ import Hero from "../../Components/Hero/Hero";
 import Foodies from '../../Components/Foodies/Foodies';
 import Overview from '../../Components/Overview/Overview';
 import Recipes from '../../Components/Recipes/Recipes';
+import Collection from '../../Components/Collection/Collection';
+import Chef from '../../Components/Chefs/Chef';
+import Client from '../../Components/Clients/Client';
+import Footer from '../../Components/Footer/Footer';
 function Home() {
   const [menu, setMenu] = useState([]);
   const url = 'http://localhost:8000';
@@ -24,15 +28,11 @@ function Home() {
         <Foodies/>
         <Overview/>
         <Recipes/>
-      <ul>
-        {menu &&
-          menu.map((item) => (
-            <li>
-        
-              <img src={`http://localhost:8000${item.image}`} alt={item.name} />
-            </li>
-          ))}
-      </ul>
+        <Collection/>
+        <Chef/>
+        <Client/>
+        <Footer/>
+      
     </main>
   );
 }
