@@ -8,6 +8,7 @@ import Overview from '../../Components/Overview/Overview';
 import Recipes from '../../Components/Recipes/Recipes';
 import Collection from '../../Components/Collection/Collection';
 import Chef from '../../Components/Chefs/Chef';
+import Client from '../../Components/Clients/Client';
 function Home() {
   const [menu, setMenu] = useState([]);
   const url = 'http://localhost:8000';
@@ -28,6 +29,7 @@ function Home() {
         <Recipes/>
         <Collection/>
         <Chef/>
+        <Client/>
       <ul>
         {menu &&
           menu.map((item) => (

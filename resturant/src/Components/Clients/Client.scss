@@ -1,0 +1,26 @@
+.client{
+    margin: 1rem 12rem;
+    &__title{
+        margin: 5rem 0 3rem;
+        font-size:3rem ;
+        text-align: center;
+    }
+    &__title-red{
+        color:#F54749 ;
+    }
+    &__story{
+        display: flex;
+    }
+    &__story-wrap{
+        display: flex;
+    }
+    &__img{
+        width: 15rem;
+        height: 10rem;
+        border-radius: 10px;
+    }
+    &__detail-wrap{
+        margin-left: 2rem;
+    }
+    
+}
