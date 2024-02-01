@@ -1,0 +1,31 @@
+
+.item {
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 8px;
+  width: 300px;
+
+
+&__image {
+  width: 100%;
+}
+
+&__info {
+  padding: 10px;
+}
+
+&__name {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+&__price {
+  color: red;
+}
+
+&__description {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+}
