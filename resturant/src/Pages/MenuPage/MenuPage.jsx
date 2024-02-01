@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import MenuList from '../../Components/MenuList/MenuList';
 
 function Menu() {
   const [menu, setMenu] = useState([]);
@@ -17,13 +18,15 @@ function Menu() {
   return (
     <main>
       <h1>Our Menu</h1>
+
+      {!menu && <h1>Loading...</h1>}
       <ul>
-        {!menu && <h1>Loading...</h1>}
         {menu &&
           menu.map((item) => (
-            <li>
-              <img src={`http://localhost:8000${item.image}`} alt={item.name} />
-            </li>
+            <MenuList key={item.id} {...item} />
+            // <li key={ item.id}>
+            //   <img src={`http://localhost:8000${item.image}`} alt={item.name} />
+            // </li>
           ))}
       </ul>
     </main>
