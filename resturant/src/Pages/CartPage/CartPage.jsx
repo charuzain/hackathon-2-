@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from '../../CartContex'
+import { useCart } from '../../CartContex';
 import { Link } from 'react-router-dom';
 
 const CartPage = () => {
@@ -14,7 +14,12 @@ const CartPage = () => {
     <div>
       <h1>Your Cart</h1>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <>
+          <p>Your cart is empty.</p>
+          <Link to="/menu">
+            <button>Add Items to Cart</button>
+          </Link>
+        </>
       ) : (
         <>
           <ul>
@@ -52,5 +57,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
-
