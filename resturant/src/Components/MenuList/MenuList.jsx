@@ -10,41 +10,43 @@ const MenuList = (props) => {
 
   useEffect(() => {
     const existingCartItem = cartItems.find((item) => item.id === props.id);
+
     if (existingCartItem) {
       setQuantity(existingCartItem.quantity);
     } else {
-      setQuantity(0); 
+      setQuantity(0);
     }
   }, [cartItems, props.id]);
 
-  const handleAddToCart = (e) => {
-    e.stopPropagation();
-    const existingCartItem = cartItems.find((item) => item.id === props.id);
-    console.log('Existing Cart Item:', existingCartItem);
+  const addToCartAndUpdate = (newQuantity) => {
+    if (newQuantity > 0) {
+      const newItem = {
+        id: props.id,
+        name: props.name,
+        price: props.price,
+        quantity: newQuantity,
+        total: props.price * newQuantity,
+        image: props.image,
+      };
 
-     const newItem = {
-       id: props.id,
-       name: props.name,
-       price: props.price,
-       quantity: quantity,
-       total: props.price * (quantity),
-     };
-
-
-
-    addToCart(newItem);
-    console.log(`Added ${quantity} ${props.name} to cart`);
-    navigate('/cart');
+      addToCart(newItem);
+      console.log(`Added ${newQuantity} ${props.name} to cart`);
+      navigate('/cart');
+    }
   };
 
   const handleIncreaseQuantity = () => {
-    setQuantity(quantity + 1);
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
   const handleDecreaseQuantity = () => {
     if (quantity >= 1) {
-      setQuantity(quantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
     }
+  };
+
+  const handleAddToCart = () => {
+    addToCartAndUpdate(quantity);
   };
 
   return (
@@ -75,6 +77,11 @@ const MenuList = (props) => {
         </div>
         <div className='item__cart'>
         <button className="item__add-to-cart-button" onClick={handleAddToCart}>
+        <button
+          className="add-to-cart-button"
+          onClick={handleAddToCart}
+          disabled={quantity === 0}
+        >
           Add to Cart
         </button>
         </div>
