@@ -4,6 +4,8 @@ import { useCart } from '../../CartContex';
 import './MenuList.scss';
 
 const MenuList = (props) => {
+  console.log(("----"))
+  console.log(props)
   const [quantity, setQuantity] = useState(0);
   const { addToCart, cartItems } = useCart();
   const navigate = useNavigate();
@@ -28,6 +30,8 @@ const MenuList = (props) => {
        price: props.price,
        quantity: quantity,
        total: props.price * (quantity),
+       image:props.image
+
      };
 
 

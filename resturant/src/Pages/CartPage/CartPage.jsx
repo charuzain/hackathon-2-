@@ -20,6 +20,13 @@ const CartPage = () => {
           <ul>
             {cartItems.map((item) => (
               <li key={item.id}>
+                <div>
+                  <img
+                    src={`http://localhost:8000${item.image}`}
+                    alt={item.name}
+                    className="img"
+                  />
+                </div>
                 <p>
                   You ordered {item.quantity} {item.name}
                 </p>
