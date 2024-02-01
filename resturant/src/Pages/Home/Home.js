@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./Home.scss";
 import Hero from "../../Components/Hero/Hero";
+=======
+
+import { useEffect, useState } from 'react';
+import './Home.scss';
+import axios from 'axios';
+// import { link } from '../../../../server/routes/menuRouter';
+>>>>>>> 97ec40f7686a92cb700b51b29ad539519ae73b21
 function Home() {
   const [menu, setMenu] = useState([]);
   const url = 'http://localhost:8000';
@@ -16,6 +24,7 @@ function Home() {
 
   return (
     <main>
+        <Hero />
       <ul>
         {menu &&
           menu.map((item) => (
@@ -25,7 +34,6 @@ function Home() {
             </li>
           ))}
       </ul>
-        <Hero></Hero>
     </main>
   );
 }
