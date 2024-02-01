@@ -4,6 +4,7 @@ import axios from 'axios';
 import "./Home.scss";
 import Hero from "../../Components/Hero/Hero";
 import Foodies from '../../Components/Foodies/Foodies';
+import Overview from '../../Components/Overview/Overview';
 function Home() {
   const [menu, setMenu] = useState([]);
   const url = 'http://localhost:8000';
@@ -20,6 +21,7 @@ function Home() {
     <main>
         <Hero />
         <Foodies/>
+        <Overview/>
       <ul>
         {menu &&
           menu.map((item) => (
