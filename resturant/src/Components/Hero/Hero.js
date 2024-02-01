@@ -1,6 +1,12 @@
 import "./Hero.scss";
+import { useNavigate } from 'react-router-dom';
 import backgroundimg from "../../assets/11.png";
 function Hero() {
+    const navigate = useNavigate();
+
+    const handleBtnClick = () => {
+      navigate('/menu');
+    };
   return (
     <section className="hero">
       <div className="hero__wrap">
@@ -18,7 +24,7 @@ function Hero() {
             </p>
           </div>
           <div className="hero__btn-wrap">
-            <button className="hero__btn">See Our Menu</button>
+            <button className="hero__btn" onClick={handleBtnClick}>See Our Menu</button>
           </div>
         </div>
         <div className="hero__img-wrap">

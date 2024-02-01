@@ -10,6 +10,7 @@ li{
         display: flex;
         margin: 0;
     }
+    
     &__items{
         display: flex;
         margin-left: 20rem;
@@ -28,4 +29,8 @@ li{
 
     }
 
+}
+
+.nav__link{
+   color: white 
 }
