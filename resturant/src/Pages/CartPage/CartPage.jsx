@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../../CartContex';
 import { Link } from 'react-router-dom';
+import "./CartPage.scss";
 
 const CartPage = () => {
   const { cartItems, setCartItems } = useCart();
