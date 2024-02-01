@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./Categories.scss";
 const Categories = ({ categories, filterItems }) => {
   return (
     <div className="btn-container">

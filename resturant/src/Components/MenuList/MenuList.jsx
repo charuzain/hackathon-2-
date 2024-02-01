@@ -66,15 +66,17 @@ const MenuList = (props) => {
       </Link>
       <div className="item__info">
         <p className="item__description">{props.description}</p>
-        <div className="quantity-controls">
-          <button className="quantity-button" onClick={handleDecreaseQuantity}>
+        <div className="item__quantity-controls">
+          <button className="item__quantity-button" onClick={handleDecreaseQuantity}>
             -
           </button>
-          <span className="quantity-display">{quantity}</span>
-          <button className="quantity-button" onClick={handleIncreaseQuantity}>
+          <span className="item__quantity-display">{quantity}</span>
+          <button className="item__quantity-button" onClick={handleIncreaseQuantity}>
             +
           </button>
         </div>
+        <div className='item__cart'>
+        <button className="item__add-to-cart-button" onClick={handleAddToCart}>
         <button
           className="add-to-cart-button"
           onClick={handleAddToCart}
@@ -82,6 +84,7 @@ const MenuList = (props) => {
         >
           Add to Cart
         </button>
+        </div>
       </div>
     </li>
   );
