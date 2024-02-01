@@ -229,7 +229,7 @@
     "name": "Refreshing Lemonade",
     "description": "Freshly squeezed lemons combined with pure cane sugar, served over ice.",
     "price": 4.99,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -237,7 +237,7 @@
     "name": "Tropical Fruit Smoothie",
     "description": "A blend of tropical fruits including mango, pineapple, and banana.",
     "price": 5.99,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -245,7 +245,7 @@
     "name": "Strawberry Mojito",
     "description": "Muddled strawberries, mint, and lime combined with soda water for a refreshing mocktail.",
     "price": 4.99,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -253,7 +253,7 @@
     "name": "Blueberry Lemonade",
     "description": "Lemonade infused with blueberry puree for a sweet and tangy twist.",
     "price": 4.99,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -261,7 +261,7 @@
     "name": "Pineapple Coconut Smoothie",
     "description": "A tropical blend of pineapple and coconut, perfect for a refreshing sip.",
     "price": 5.99,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -269,7 +269,7 @@
     "name": "Cucumber Mint Cooler",
     "description": "Cooling cucumber and fresh mint combined with sparkling water.",
     "price": 4.49,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -277,7 +277,7 @@
     "name": "Watermelon Splash",
     "description": "Juicy watermelon blended into a delightful summer beverage.",
     "price": 4.49,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -285,7 +285,7 @@
     "name": "Mango Tango Smoothie",
     "description": "Mango, banana, and orange juice blended into a tropical delight.",
     "price": 5.49,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   },
   {
@@ -293,7 +293,7 @@
     "name": "Berry Burst Lemonade",
     "description": "Mixed berries muddled with lemonade for a burst of fruity flavor.",
     "price": 4.99,
-    "category": "Drinks and Shakes",
+    "category": "Drinks",
     "vegetarian": true
   }
 ]
