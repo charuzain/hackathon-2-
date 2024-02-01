@@ -5,7 +5,7 @@ import { useCart } from '../../CartContex'
 import './MenuList.scss';
 
 const MenuList = (props) => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
   const { addToCart } = useCart();
   const navigate = useNavigate();
   const handleAddToCart = (e) => {
