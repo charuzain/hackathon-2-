@@ -1,0 +1,30 @@
+a{
+  text-decoration: none;  
+}
+li{
+    list-style: none;
+}
+.nav{
+    background-color: #000;
+    &__list{
+        display: flex;
+    }
+    &__items{
+        display: flex;
+        margin-left: 20rem;
+        color: white;
+        margin-top: 1rem;
+    }
+    &__home{
+        margin-right: 3rem;
+    }
+    &__menu{
+        margin-right: 3rem;
+
+    }
+    &__about{
+        margin-right: 3rem;
+
+    }
+
+}
