@@ -17,19 +17,13 @@ const getMenu = () => {
 
 router.get('/', (req, res) => {
   const parsedMenu = getMenu();
+  console.log(parsedMenu)
   const menuWithImages = parsedMenu.map((dish, index) => ({
     ...dish,
     // image: `/images/${dish.category.toLowerCase()}/${dish.id}.jpg`,
     image: `/images/${dish.category.toLowerCase()}/${(index % 9) + 1}.jpg`,
   }));
-  const menu = menuWithImages.map((dish) => ({
-    id: dish.id,
-    price: dish.price,
-    image: dish.image,
-    name: dish.name,
-  }));
-
-  res.json(menu);
+  res.json(menuWithImages);
 });
 
 router.get('/:id', (req, res) => {
