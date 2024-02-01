@@ -63,6 +63,10 @@ function Menu() {
       </div>
       <Categories categories={allCategories} filterItems={filterItems} />
 
+      {filteredMenu.length === 0 && searchInput.trim() !== '' && (
+        <p>No dishes found with name or ingredient: "{searchInput}"</p>
+      )}
+
       {!menu && <h1>Loading...</h1>}
       <ul>
         {currentItems.map((item) => (
