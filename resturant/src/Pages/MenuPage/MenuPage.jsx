@@ -10,6 +10,7 @@ function Menu() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchInput, setSearchInput] = useState('');
   const [sortBy, setSortBy] = useState('none'); 
+  const [showVegetarian, setShowVegetarian] = useState(true); 
   const allCategories = ['all', 'burgers', 'soups', 'drinks'];
 
   const url = 'http://localhost:8000';
@@ -55,13 +56,14 @@ function Menu() {
         ? true
         : item.category.toLowerCase() === currentCategory.toLowerCase()
     )
+    .filter((item) => (showVegetarian ? item.vegetarian : true)) 
     .sort((a, b) => {
       if (sortBy === 'asc') {
         return a.price - b.price;
       } else if (sortBy === 'desc') {
         return b.price - a.price;
       }
-      return 0; 
+      return 0;
     });
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -90,6 +92,16 @@ function Menu() {
               <option value="asc">Ascending</option>
               <option value="desc">Descending</option>
             </select>
+          </label>
+        </div>
+        <div className="vegetarian-switch">
+          <label>
+            Vegetarian Only
+            <input
+              type="checkbox"
+              checked={showVegetarian}
+              onChange={() => setShowVegetarian(!showVegetarian)}
+            />
           </label>
         </div>
       </div>
