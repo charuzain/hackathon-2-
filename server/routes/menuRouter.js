@@ -6,7 +6,7 @@ const path = require('path');
 router.use(express.json());
 
 
-app.use('/images', express.static('./images'));
+app.use('/images', express.static('../images'));
 
 
 
@@ -21,10 +21,17 @@ const getMenu = () => {
 
 router.get('/', (req, res) => {
   const parsedMenu = getMenu();
-  const menu = parsedMenu.map((dish) => ({
+  const menuWithImages = parsedMenu.map((dish, index) => ({
+    ...dish,
+    image: `/images/${dish.category.toLowerCase()}/${
+      (index % 9) + 1
+    }.jpg`,
+  }));
+  console.log(menuWithImages[10])
+  const menu = menuWithImages.map((dish) => ({
     id: dish.id,
-    price: dish.price
-    
+    price: dish.price,
+    image:dish.image
   }));
 
   res.json(menu);
