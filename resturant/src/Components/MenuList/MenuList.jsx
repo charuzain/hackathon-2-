@@ -1,27 +1,40 @@
-
-import React, { useState } from 'react';
-import { Link , useNavigate} from 'react-router-dom';
-import { useCart } from '../../CartContex' 
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from '../../CartContex';
 import './MenuList.scss';
 
 const MenuList = (props) => {
   const [quantity, setQuantity] = useState(0);
-  const { addToCart } = useCart();
+  const { addToCart, cartItems } = useCart();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const existingCartItem = cartItems.find((item) => item.id === props.id);
+    if (existingCartItem) {
+      setQuantity(existingCartItem.quantity);
+    } else {
+      setQuantity(0); 
+    }
+  }, [cartItems, props.id]);
+
   const handleAddToCart = (e) => {
     e.stopPropagation();
+    const existingCartItem = cartItems.find((item) => item.id === props.id);
+    console.log('Existing Cart Item:', existingCartItem);
 
-    const newItem = {
-      id: props.id,
-      name: props.name,
-      price: props.price,
-      total: props.price*quantity,
-      quantity: quantity,
-    };
+     const newItem = {
+       id: props.id,
+       name: props.name,
+       price: props.price,
+       quantity: quantity,
+       total: props.price * (quantity),
+     };
+
+
 
     addToCart(newItem);
     console.log(`Added ${quantity} ${props.name} to cart`);
-      navigate('/cart');
+    navigate('/cart');
   };
 
   const handleIncreaseQuantity = () => {
