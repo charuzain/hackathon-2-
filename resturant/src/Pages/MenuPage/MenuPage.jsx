@@ -8,6 +8,7 @@ function Menu() {
   const [menu, setMenu] = useState([]);
   const [currentCategory, setCurrentCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchInput, setSearchInput] = useState('');
   const allCategories = ['all', 'burgers', 'soups', 'drinks'];
 
   const url = 'http://localhost:8000';
@@ -32,13 +33,16 @@ function Menu() {
 
   const itemsPerPage = currentCategory === 'all' ? 12 : 9;
 
-  const filteredMenu =
-    currentCategory === 'all'
-      ? [...menu]
-      : menu.filter(
-          (item) =>
-            item.category.toLowerCase() === currentCategory.toLowerCase()
-        );
+  const filteredMenu = menu.filter((item) => {
+    const itemNameMatch = item.name
+      .toLowerCase()
+      .includes(searchInput.toLowerCase());
+    const ingredientMatch = item.ingredients.some((ingredient) =>
+      ingredient.toLowerCase().includes(searchInput.toLowerCase())
+    );
+
+    return itemNameMatch || ingredientMatch;
+  });
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -49,7 +53,19 @@ function Menu() {
   return (
     <main>
       <h1>Our Menu</h1>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by name or ingredient..."
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+      </div>
       <Categories categories={allCategories} filterItems={filterItems} />
+
+      {filteredMenu.length === 0 && searchInput.trim() !== '' && (
+        <p>No dishes found with name or ingredient: "{searchInput}"</p>
+      )}
 
       {!menu && <h1>Loading...</h1>}
       <ul>
