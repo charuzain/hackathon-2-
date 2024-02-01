@@ -6,6 +6,7 @@ import Hero from "../../Components/Hero/Hero";
 import Foodies from '../../Components/Foodies/Foodies';
 import Overview from '../../Components/Overview/Overview';
 import Recipes from '../../Components/Recipes/Recipes';
+import Collection from '../../Components/Collection/Collection';
 function Home() {
   const [menu, setMenu] = useState([]);
   const url = 'http://localhost:8000';
@@ -24,6 +25,7 @@ function Home() {
         <Foodies/>
         <Overview/>
         <Recipes/>
+        <Collection/>
       <ul>
         {menu &&
           menu.map((item) => (
