@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Home.scss';
 import axios from 'axios';
-// import { link } from '../../../../server/routes/menuRouter';
 import "./Home.scss";
 import Hero from "../../Components/Hero/Hero";
 function Home() {
