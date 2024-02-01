@@ -1,0 +1,27 @@
+.foodies{
+
+    &__wrap{
+        margin-left: 15rem;
+    }
+    &__title{
+        text-align: start;
+        margin-left: 22rem;
+        font-size: 3rem;
+    }
+    &__title-red{
+        color:#F5484A ;
+    }
+    &__img-wrap{
+        display: flex;
+        text-align: center;
+    }
+    &__item-wrap{
+        background-color: #F7F6F4;
+        border-radius: 1rem;
+        padding: 1rem 3rem;
+        width: 15%;
+        margin-right: 5rem;
+        box-shadow: 3px 10px 10px rgb(128, 124, 124);
+    }
+  
+}
