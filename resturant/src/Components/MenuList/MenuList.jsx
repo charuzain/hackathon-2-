@@ -1,14 +1,27 @@
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
+import { useCart } from '../../CartContex' 
 import './MenuList.scss';
 
 const MenuList = (props) => {
-  const [quantity, setQuantity] = useState(0);
-
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
   const handleAddToCart = (e) => {
- 
     e.stopPropagation();
+
+    const newItem = {
+      id: props.id,
+      name: props.name,
+      price: props.price,
+      total: props.price*quantity,
+      quantity: quantity,
+    };
+
+    addToCart(newItem);
     console.log(`Added ${quantity} ${props.name} to cart`);
+      navigate('/cart');
   };
 
   const handleIncreaseQuantity = () => {
