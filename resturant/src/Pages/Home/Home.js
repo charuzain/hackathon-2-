@@ -32,15 +32,7 @@ function Home() {
         <Chef/>
         <Client/>
         <Footer/>
-      <ul>
-        {menu &&
-          menu.map((item) => (
-            <li>
-        
-              <img src={`http://localhost:8000${item.image}`} alt={item.name} />
-            </li>
-          ))}
-      </ul>
+      
     </main>
   );
 }
