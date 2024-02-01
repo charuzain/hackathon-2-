@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 router.use(express.json());
 app.use('/images', express.static('../images'));
+// app.use('/images', express.static(path.join(__dirname, '../images')));
 
 const getMenu = () => {
   const filePath = path.join(__dirname, '../data/menu.json');
@@ -18,6 +19,7 @@ router.get('/', (req, res) => {
   const parsedMenu = getMenu();
   const menuWithImages = parsedMenu.map((dish, index) => ({
     ...dish,
+    // image: `/images/${dish.category.toLowerCase()}/${dish.id}.jpg`,
     image: `/images/${dish.category.toLowerCase()}/${(index % 9) + 1}.jpg`,
   }));
   const menu = menuWithImages.map((dish) => ({
@@ -31,15 +33,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
- const selectedId = parseInt(req.params.id);
+  const selectedId = parseInt(req.params.id);
   const parsedMenu = getMenu();
-   const menuWithImages = parsedMenu.map((dish, index) => ({
-     ...dish,
-     image: `/images/${dish.category.toLowerCase()}/${(index % 9) + 1}.jpg`,
-   }));
-  const findMenuByid = menuWithImages.find(dish => dish.id === selectedId);
-  console.log(findMenuByid)
-  res.json(findMenuByid)
+  const menuWithImages = parsedMenu.map((dish, index) => ({
+    ...dish,
+    image: `/images/${dish.category.toLowerCase()}/${(index % 9) + 1}.jpg`,
+  }));
+  const findMenuByid = menuWithImages.find((dish) => dish.id === selectedId);
+  console.log(findMenuByid);
+  res.json(findMenuByid);
 });
 
 module.exports = router;
