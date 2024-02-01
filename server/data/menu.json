@@ -1,0 +1,489 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Burger",
+    "description": "Juicy beef patty topped with lettuce, tomato, and cheddar cheese, served with our special sauce.",
+    "price": 10.99,
+    "category": "Burgers",
+    "vegetarian": false,
+    "ingredients": [
+      "beef patty",
+      "lettuce",
+      "tomato",
+      "cheddar cheese",
+      "special sauce"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 2,
+    "name": "Vegetarian Burger",
+    "description": "Grilled veggie patty with lettuce, tomato, and avocado, served with a tangy yogurt sauce.",
+    "price": 9.99,
+    "category": "Burgers",
+    "vegetarian": true,
+    "ingredients": [
+      "grilled veggie patty",
+      "lettuce",
+      "tomato",
+      "avocado",
+      "yogurt sauce"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 3,
+    "name": "BBQ Bacon Burger",
+    "description": "Beef patty with crispy bacon, cheddar cheese, and smoky BBQ sauce.",
+    "price": 12.99,
+    "category": "Burgers",
+    "vegetarian": false,
+    "ingredients": [
+      "beef patty",
+      "crispy bacon",
+      "cheddar cheese",
+      "smoky BBQ sauce"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 4,
+    "name": "Mushroom Swiss Burger",
+    "description": "Beef patty topped with sautéed mushrooms, Swiss cheese, and garlic aioli.",
+    "price": 11.99,
+    "category": "Burgers",
+    "vegetarian": false,
+    "ingredients": [
+      "beef patty",
+      "sautéed mushrooms",
+      "Swiss cheese",
+      "garlic aioli"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 5,
+    "name": "Spicy Chickpea Burger",
+    "description": "Spicy chickpea patty with lettuce, tomato, and tzatziki sauce.",
+    "price": 10.49,
+    "category": "Burgers",
+    "vegetarian": true,
+    "ingredients": [
+      "spicy chickpea patty",
+      "lettuce",
+      "tomato",
+      "tzatziki sauce"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 6,
+    "name": "Jalapeño Popper Burger",
+    "description": "Beef patty with jalapeño poppers, cream cheese, and chipotle mayo.",
+    "price": 13.49,
+    "category": "Burgers",
+    "vegetarian": false,
+    "ingredients": [
+      "beef patty",
+      "jalapeño poppers",
+      "cream cheese",
+      "chipotle mayo"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 7,
+    "name": "Teriyaki Pineapple Burger",
+    "description": "Grilled beef patty with teriyaki glaze, grilled pineapple, and Swiss cheese.",
+    "price": 12.99,
+    "category": "Burgers",
+    "vegetarian": false,
+    "ingredients": [
+      "grilled beef patty",
+      "teriyaki glaze",
+      "grilled pineapple",
+      "Swiss cheese"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 8,
+    "name": "Black Bean Quinoa Burger",
+    "description": "Black bean and quinoa patty with avocado, lettuce, and chipotle mayo.",
+    "price": 10.99,
+    "category": "Burgers",
+    "vegetarian": true,
+    "ingredients": [
+      "black bean quinoa patty",
+      "avocado",
+      "lettuce",
+      "chipotle mayo"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 9,
+    "name": "Blue Cheese Bacon Burger",
+    "description": "Beef patty with blue cheese crumbles, bacon, and caramelized onions.",
+    "price": 13.99,
+    "category": "Burgers",
+    "vegetarian": false,
+    "ingredients": [
+      "beef patty",
+      "blue cheese crumbles",
+      "bacon",
+      "caramelized onions"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 10,
+    "name": "Greek Salad",
+    "description": "Fresh mixed greens with tomatoes, cucumbers, olives, feta cheese, and Greek dressing.",
+    "price": 8.99,
+    "category": "Salads",
+    "vegetarian": true,
+    "ingredients": [
+      "mixed greens",
+      "tomatoes",
+      "cucumbers",
+      "olives",
+      "feta cheese",
+      "Greek dressing"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 11,
+    "name": "Caesar Salad",
+    "description": "Romaine lettuce with Caesar dressing, croutons, and parmesan cheese.",
+    "price": 7.99,
+    "category": "Salads",
+    "vegetarian": false,
+    "ingredients": [
+      "romaine lettuce",
+      "Caesar dressing",
+      "croutons",
+      "parmesan cheese"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 12,
+    "name": "Caprese Salad",
+    "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
+    "price": 9.99,
+    "category": "Salads",
+    "vegetarian": true,
+    "ingredients": ["fresh mozzarella", "tomatoes", "basil", "balsamic glaze"],
+    "isRecommended": true
+  },
+  {
+    "id": 13,
+    "name": "Thai Mango Salad",
+    "description": "Mixed greens with mango slices, bell peppers, peanuts, and Thai peanut dressing.",
+    "price": 10.49,
+    "category": "Salads",
+    "vegetarian": true,
+    "ingredients": [
+      "mixed greens",
+      "mango slices",
+      "bell peppers",
+      "peanuts",
+      "Thai peanut dressing"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 14,
+    "name": "Southwest Chicken Salad",
+    "description": "Grilled chicken, black beans, corn, avocado, and cilantro-lime dressing.",
+    "price": 11.99,
+    "category": "Salads",
+    "vegetarian": false,
+    "ingredients": [
+      "grilled chicken",
+      "black beans",
+      "corn",
+      "avocado",
+      "cilantro-lime dressing"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 15,
+    "name": "Kale and Quinoa Salad",
+    "description": "Kale and quinoa salad with dried cranberries, feta cheese, and balsamic vinaigrette.",
+    "price": 9.99,
+    "category": "Salads",
+    "vegetarian": true,
+    "ingredients": [
+      "kale",
+      "quinoa",
+      "dried cranberries",
+      "feta cheese",
+      "balsamic vinaigrette"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 16,
+    "name": "Avocado BLT Salad",
+    "description": "Crispy bacon, lettuce, tomatoes, and avocado with ranch dressing.",
+    "price": 10.99,
+    "category": "Salads",
+    "vegetarian": false,
+    "ingredients": [
+      "crispy bacon",
+      "lettuce",
+      "tomatoes",
+      "avocado",
+      "ranch dressing"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 17,
+    "name": "Mediterranean Quinoa Salad",
+    "description": "Quinoa salad with cherry tomatoes, cucumbers, olives, and feta cheese.",
+    "price": 9.49,
+    "category": "Salads",
+    "vegetarian": true,
+    "ingredients": [
+      "quinoa",
+      "cherry tomatoes",
+      "cucumbers",
+      "olives",
+      "feta cheese"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 18,
+    "name": "Asian Sesame Chicken Salad",
+    "description": "Sesame-crusted chicken, mixed greens, mandarin oranges, and soy-ginger dressing.",
+    "price": 11.99,
+    "category": "Salads",
+    "vegetarian": false,
+    "ingredients": [
+      "sesame-crusted chicken",
+      "mixed greens",
+      "mandarin oranges",
+      "soy-ginger dressing"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 20,
+    "name": "Vegetarian Minestrone Soup",
+    "description": "Hearty vegetable soup with beans, pasta, and a flavorful broth.",
+    "price": 6.99,
+    "category": "Soups",
+    "vegetarian": true,
+    "ingredients": [
+      "hearty vegetable soup",
+      "beans",
+      "pasta",
+      "flavorful broth"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 21,
+    "name": "Chicken Noodle Soup",
+    "description": "Homemade chicken noodle soup with tender chicken, vegetables, and egg noodles.",
+    "price": 7.99,
+    "category": "Soups",
+    "vegetarian": false,
+    "ingredients": [
+      "homemade chicken noodle soup",
+      "tender chicken",
+      "vegetables",
+      "egg noodles"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 22,
+    "name": "Lobster Bisque",
+    "description": "Creamy soup with chunks of lobster, seasoned to perfection.",
+    "price": 12.99,
+    "category": "Soups",
+    "vegetarian": false,
+    "ingredients": [
+      "creamy soup",
+      "chunks of lobster",
+      "seasoned to perfection"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 23,
+    "name": "Tomato Basil Bisque",
+    "description": "Rich and creamy tomato basil soup garnished with fresh basil leaves.",
+    "price": 8.49,
+    "category": "Soups",
+    "vegetarian": true,
+    "ingredients": ["rich and creamy tomato basil soup", "fresh basil leaves"],
+    "isRecommended": true
+  },
+  {
+    "id": 24,
+    "name": "Spicy Sausage Gumbo",
+    "description": "Spicy gumbo with sausage, shrimp, okra, and Cajun spices.",
+    "price": 10.99,
+    "category": "Soups",
+    "vegetarian": false,
+    "ingredients": ["spicy gumbo", "sausage", "shrimp", "okra", "Cajun spices"],
+    "isRecommended": false
+  },
+  {
+    "id": 25,
+    "name": "Butternut Squash Soup",
+    "description": "Creamy butternut squash soup with a hint of cinnamon and nutmeg.",
+    "price": 9.99,
+    "category": "Soups",
+    "vegetarian": true,
+    "ingredients": [
+      "creamy butternut squash soup",
+      "hint of cinnamon",
+      "nutmeg"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 26,
+    "name": "Clam Chowder",
+    "description": "New England-style clam chowder with tender clams and potatoes.",
+    "price": 11.49,
+    "category": "Soups",
+    "vegetarian": false,
+    "ingredients": [
+      "New England-style clam chowder",
+      "tender clams",
+      "potatoes"
+    ],
+    "isRecommended": false
+  },
+  {
+    "id": 27,
+    "name": "French Onion Soup",
+    "description": "Caramelized onions in a rich beef broth, topped with melted Swiss cheese.",
+    "image": "soup_image_url_8",
+    "price": 8.99,
+    "category": "Soups",
+    "vegetarian": false,
+    "ingredients": [
+      "caramelized onions",
+      "rich beef broth",
+      "melted Swiss cheese"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 28,
+    "name": "Chicken Tortilla Soup",
+    "description": "Spicy chicken tortilla soup with corn, black beans, and tortilla strips.",
+    "image": "soup_image_url_9",
+    "price": 9.99,
+    "category": "Soups",
+    "vegetarian": false,
+    "ingredients": [
+      "spicy chicken tortilla soup",
+      "corn",
+      "black beans",
+      "tortilla strips"
+    ],
+    "isRecommended": true
+  },
+  {
+    "id": 29,
+    "name": "Refreshing Lemonade",
+    "description": "Freshly squeezed lemons combined with pure cane sugar, served over ice.",
+    "price": 4.99,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["freshly squeezed lemons", "pure cane sugar", "ice"],
+    "isRecommended": false
+  },
+  {
+    "id": 30,
+    "name": "Tropical Fruit Smoothie",
+    "description": "A blend of tropical fruits including mango, pineapple, and banana.",
+    "price": 5.99,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["tropical fruits blend", "mango", "pineapple", "banana"],
+    "isRecommended": true
+  },
+  {
+    "id": 31,
+    "name": "Strawberry Mojito",
+    "description": "Muddled strawberries, mint, and lime combined with soda water for a refreshing mocktail.",
+    "price": 4.99,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["muddled strawberries", "mint", "lime", "soda water"],
+    "isRecommended": false
+  },
+  {
+    "id": 32,
+    "name": "Blueberry Lemonade",
+    "description": "Lemonade infused with blueberry puree for a sweet and tangy twist.",
+    "price": 4.99,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["lemonade", "blueberry puree", "sweet and tangy twist"],
+    "isRecommended": true
+  },
+  {
+    "id": 33,
+    "name": "Pineapple Coconut Smoothie",
+    "description": "A tropical blend of pineapple and coconut, perfect for a refreshing sip.",
+    "price": 5.99,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["tropical blend", "pineapple", "coconut", "refreshing sip"],
+    "isRecommended": false
+  },
+  {
+    "id": 34,
+    "name": "Cucumber Mint Cooler",
+    "description": "Cooling cucumber and fresh mint combined with sparkling water.",
+    "price": 4.49,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["cooling cucumber", "fresh mint", "sparkling water"],
+    "isRecommended": true
+  },
+  {
+    "id": 35,
+    "name": "Watermelon Splash",
+    "description": "Juicy watermelon blended into a delightful summer beverage.",
+    "price": 4.49,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["juicy watermelon", "delightful summer beverage"],
+    "isRecommended": false
+  },
+  {
+    "id": 36,
+    "name": "Mango Tango Smoothie",
+    "description": "Mango, banana, and orange juice blended into a tropical delight.",
+    "price": 5.49,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["mango", "banana", "orange juice", "tropical delight"],
+    "isRecommended": true
+  },
+  {
+    "id": 37,
+    "name": "Berry Burst Lemonade",
+    "description": "Mixed berries muddled with lemonade for a burst of fruity flavor.",
+    "price": 4.99,
+    "category": "Drinks",
+    "vegetarian": true,
+    "ingredients": ["mixed berries", "lemonade", "burst of fruity flavor"],
+    "isRecommended": false
+  }
+]

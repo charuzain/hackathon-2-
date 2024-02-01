@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "specialty": "Mediterranean Cuisine"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "specialty": "French Pastries"
+  },
+  {
+    "id": 3,
+    "name": "Jessy Sharratt",
+    "specialty": "Asian Fusion"
+  },
+  {
+    "id": 4,
+    "name": "Ethan Harris",
+    "specialty": "Vegetarian Delights"
+  }
+]
