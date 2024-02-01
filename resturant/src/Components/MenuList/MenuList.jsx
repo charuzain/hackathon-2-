@@ -1,4 +1,5 @@
 import React from 'react'
+import './MenuList.scss';
 
 const MenuList = (props) => {
   console.log(props)
