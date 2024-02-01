@@ -1,0 +1,27 @@
+.hero{
+    margin-top: 0;
+    background-color: #000;
+    &__wrap{
+        display:flex ;
+        margin-left: 3rem;
+    }
+    &__item-wrap{
+        width: 30%;
+        margin-top: 8rem;
+        margin-right: 15rem;
+    }
+    &__title{
+        color: #fff;
+        font-size: 2rem;
+    }
+    &__tag{
+        color: #fff;
+    }
+    &__btn{
+        border: none;
+        background-color: #fff;
+        color: #000;
+        border-radius: .25rem;
+        padding: .75rem 2rem;
+    }
+}
