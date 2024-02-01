@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "review": "Amazing food and great service! I loved the burgers.",
+    "image": "/images/reviewers/1.jpg",
+    "occupation": "Food Critic"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "review": "The salads are so fresh and delicious. Highly recommended!",
+    "image": "/images/reviewers/2.jpg",
+    "occupation": "Health Blogger"
+  },
+  {
+    "id": 3,
+    "name": "Alex Johnson",
+    "review": "The soups are perfect for a cozy evening. I enjoyed every spoonful.",
+    "image": "/images/reviewers/3.jpg",
+    "occupation": "Soup Enthusiast"
+  },
+  {
+    "id": 4,
+    "name": "Eva Brown",
+    "review": "The drinks are refreshing, especially the mango smoothie!",
+    "image": "/images/reviewers/4.jpg",
+    "occupation": "Fitness Trainer"
+  },
+  {
+    "id": 5,
+    "name": "Sam Carter",
+    "review": "Tried the vegetarian burger, and it was delicious! Great options for vegetarians.",
+    "image": "/images/reviewers/5.jpg",
+    "occupation": "Vegetarian Advocate"
+  }
+]
