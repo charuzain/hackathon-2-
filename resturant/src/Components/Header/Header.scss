@@ -8,6 +8,7 @@ li{
     background-color: #000;
     &__list{
         display: flex;
+        margin: 0;
     }
     &__items{
         display: flex;
