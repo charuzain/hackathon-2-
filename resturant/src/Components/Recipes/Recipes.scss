@@ -1,0 +1,39 @@
+.recipe{
+    &__wrap{
+        margin: 0 16rem;
+    }
+    &__title{
+        font-size: 2.5rem;
+        margin-top: 0;
+        
+    }
+    &__title-red{
+        color: #F54749;
+    }
+    &__item{
+        display: flex;
+    }
+    &__item-wrap{
+        margin-right: 5rem;
+    }
+    &__img{
+        width: 15rem;
+        height: 15rem;
+    }
+    &__contain{
+        background-color:#F7F6F4 ;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 1rem;
+        box-shadow: 3px 3px 10px rgb(128, 124, 124);
+    }
+    &__price{
+        font-size: 2rem;
+        margin: 0;
+        color: #F54749;
+        align-items: flex-start;
+    }
+    &__tag{
+        font-weight: bold;
+    }
+}
