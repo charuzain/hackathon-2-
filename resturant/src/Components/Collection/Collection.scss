@@ -1,0 +1,30 @@
+.collection{
+    margin: 0 12rem;
+    text-align: center;
+    &__wrap{
+        margin-top: 5rem;
+        text-align: center;
+    }
+    &__title{
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+    &__title-red{
+        color:#F54749 ;
+   
+    }
+    &__tag{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    &__imgs{
+        display: flex;
+        margin-top: 3rem;
+    }
+    &__img{
+        width: 20rem;
+        height: 20rem;
+        margin-right: 5rem;
+        border-radius: 10px;
+    }
+}
