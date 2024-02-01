@@ -4,14 +4,13 @@ import { useCart } from '../../CartContex';
 import './MenuList.scss';
 
 const MenuList = (props) => {
-  console.log(("----"))
-  console.log(props)
   const [quantity, setQuantity] = useState(0);
   const { addToCart, cartItems } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
     const existingCartItem = cartItems.find((item) => item.id === props.id);
+
     if (existingCartItem) {
       setQuantity(existingCartItem.quantity);
     } else {
@@ -21,24 +20,21 @@ const MenuList = (props) => {
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
-    const existingCartItem = cartItems.find((item) => item.id === props.id);
-    console.log('Existing Cart Item:', existingCartItem);
 
-     const newItem = {
-       id: props.id,
-       name: props.name,
-       price: props.price,
-       quantity: quantity,
-       total: props.price * (quantity),
-       image:props.image
+    if (quantity > 0) {
+      const newItem = {
+        id: props.id,
+        name: props.name,
+        price: props.price,
+        quantity: quantity ,
+        total: props.price * (quantity ),
+        image:props.image
+      };
 
-     };
-
-
-
-    addToCart(newItem);
-    console.log(`Added ${quantity} ${props.name} to cart`);
-    navigate('/cart');
+      addToCart(newItem);
+      console.log(`Added ${quantity} ${props.name} to cart`);
+      navigate('/cart');
+    }
   };
 
   const handleIncreaseQuantity = () => {
@@ -77,7 +73,11 @@ const MenuList = (props) => {
             +
           </button>
         </div>
-        <button className="add-to-cart-button" onClick={handleAddToCart}>
+        <button
+          className="add-to-cart-button"
+          onClick={handleAddToCart}
+          disabled={quantity === 0} 
+        >
           Add to Cart
         </button>
       </div>
