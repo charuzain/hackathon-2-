@@ -81,7 +81,7 @@ const MenuList = (props) => {
           className="add-to-cart-button"
           onClick={handleAddToCart}
           disabled={quantity === 0}
-        >
+        />
           Add to Cart
         </button>
         </div>
